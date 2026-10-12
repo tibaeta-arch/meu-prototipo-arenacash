@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArenaCash - Indique um Amigo</title>
+    <style>
+        /* Reset e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0A192F; /* Azul escuro moderno */
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Container do Slide */
+        .slide {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            height: 540px; /* Proporção 16:9 aproximada */
+            background: linear-gradient(135deg, #003366 0%, #0A192F 100%);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        /* Efeito de brilho de fundo (Fintech feel) */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 112, 243, 0.15) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Elementos de Conteúdo */
+        .content {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #00E7F9; /* Azul ciano de destaque */
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #00E7F9;
+            border-radius: 6px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            color: #00E7F9;
+        }
+
+        p.subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #A0B3C6;
+            max-width: 600px;
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+
+        /* Botão de CTA */
+        .btn {
+            display: inline-block;
+            background-color: #FFFFFF;
+            color: #0A192F;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(255, 255, 255, 0.2);
+            background-color: #F0F4F8;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="content">
+            <div class="logo">ArenaCash</div>
+            <h1>Indique um amigo e <br>ganhe <span class="highlight">R$ 50</span></h1>
+            <p class="subtitle">Compartilhe a experiência da sua conta digital e ganhe recompensas exclusivas por cada indicação aprovada.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+    </div>
+</body>
+</html>
